@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Desafio de Desenho Geométrico — Prova 2</title>
+<title>Desafio de Desenho Geométrico — Prova 3 trimestre </title>
 <style>
 /* Skip artifact shell — fixed styles served beside every artifact.
    Tokens, utilities and components (basecoat 1.0 markup, no CDN); artifacts
@@ -1048,8 +1048,8 @@ box-shadow: 0 10px 30px rgba(19, 52, 77, 0.10);
 padding: 20px;
 margin-top: 14px;
 }
-.quiz-title { font-size: 1.6rem; font-weight: 700; color: #13344d; margin: 6px 0 4px; }
-.quiz-sub { color: #3d5a6e; font-size: 0.92rem; margin: 0; }
+.quiz-title { font-size: 1.1rem; font-weight: 700; color: #13344d; margin: 6px 0 4px; white-space: nowrap; letter-spacing: -0.015em; }
+.quiz-sub { color: #3d5a6e; font-size: 0.85rem; margin: 0; }
 .counters { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
 .pill {
 display: inline-block;
@@ -1190,7 +1190,10 @@ color: #5a4300;
 .hidden { display: none !important; }
 @media (min-width: 600px) {
 .quiz-card { padding: 28px; }
-.quiz-title { font-size: 1.6rem; }
+.quiz-title { font-size: 1.3rem; }
+}
+@media (max-width: 600px) {
+.quiz-title { font-size: 0.95rem; white-space: nowrap; }
 }
 </style>
 </head>
@@ -1199,7 +1202,7 @@ color: #5a4300;
 <div class="app-title-wrap">
 <span class="pill">Preparação · 3º Trimestre</span>
 <h1 class="quiz-title">Desafio de Desenho Geométrico</h1>
-<p class="quiz-sub">6º Ano — Prova 2 · Professora Sueli</p>
+<p class="quiz-sub">6º Ano — 3 trim · Professora Sueli</p>
 <div class="counters">
 <span class="pill" id="cntAnswered">0 respondidas</span>
 <span class="pill pill-ok" id="cntCorrect">0 acertos</span>
@@ -1252,7 +1255,7 @@ color: #5a4300;
 </div>
 </div>
 
-<p class="footer-note">Desafio de Desenho Geométrico · 6º Ano · Prova 2</p>
+<p class="footer-note">Desafio de Desenho Geométrico · 6º Ano · Prova 3 trim </p>
 </div>
 
 <script>
@@ -1877,7 +1880,7 @@ const total = totalCount();
 const ok = correctCount();
 const pct = Math.round(ok / total * 100);
 const stats = moduleStats().filter(s => s.total > 0);
-let txt = "Desafio de Desenho Geométrico — Prova 2\n";
+let txt = "Desafio de Desenho Geométrico — Prova 3 trim \n";
 txt += "6º Ano · Professora Sueli\n";
 txt += "Resultado: " + ok + " de " + total + " acertos (" + pct + "%)\n";
 txt += getMessage(pct) + "\n\n";
